@@ -256,6 +256,7 @@ function DropdownMenu.New(Config, Dropdown, Element, CanCallback, Type)
         end
         
         for Index,Tab in next, Values do
+			task.wait(0.04)
             if (Tab.Type ~= "Divider") then
                 local TabMain = {
                     Name = typeof(Tab) == "table" and Tab.Title or Tab,
